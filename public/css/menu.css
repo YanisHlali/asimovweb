@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f6;
+}
+
+.menu, .menu a, .menu a.active {
+    background-color: white;
+}
+
+.menu {
+    display: block;
+    position: fixed;
+    width: 200px;
+    height: 100%;
+}
+  
+.menu a {
+    color: grey; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 15px; /* Add some padding */
+    margin: 25px;
+    text-decoration: none; /* Remove underline from links */
+    font-family: 'Istok Web', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    background-color: #ccf0ff;
+    color: #0258c7;
+}
+
+.menu a.active {
+    background-color: #ccf0ff;
+    color: #0258c7;
+}
