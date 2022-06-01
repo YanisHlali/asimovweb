@@ -19,7 +19,7 @@ async function creerClasse(nom,idMatiere,idProfesseur) {
 async function afficherClasses() {
     return new Promise((resolve,reject) => {
         // Récupération de toutes les classes
-        bdd.query(`SELECT * FROM classe,eleve WHERE classe.id_classe=eleve.idClasse_eleve ORDER BY nom_classe`,
+        bdd.query(`SELECT DISTINCT id_classe,nom_classe FROM classe,eleve WHERE classe.id_classe=eleve.idClasse_eleve ORDER BY nom_classe`,
         (err,result) => {
             if (err) throw err;
             resolve(result);

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/bouton-header.css">
+    <link rel="stylesheet" href="/css/classe.css">
+</head>
+<body>
+    <%- include('../components/menu.ejs') %>
+
+    <button class="header"><span>+</span> Ajouter un élève</button>
+
+    <h1><%- data[0].nom_classe %></h1>
+
+    <div class="main">
+        <% for (let i = 0; i < data.length; i++) { %>
+            <div class="eleve">
+                <div class="gauche">
+                    <p><%- data[i].nom_eleve %> <%- data[i].prenom_eleve %></p>
+                </div>
+                <div class="droite">
+                    <div class="button">
+                        <button>Modifier</button>
+                    </div>
+                    <div class="button">
+                        <button>Supprimer</button>
+                    </div>
+                </div>
+            </div>
+            <br />
+        <% } %>
+    </div>
+</body>
+</html>

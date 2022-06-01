@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
+
+div.classes {
+    position: relative;
+    width: 70%;
+    height: 300px;
+    top: 200px;
+    left: 200px;
+}
+
+div.classe {
+    display: inline-block;
+    background-color: white;
+    border-radius: 10px;
+    width: 40%;
+    height: 200px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+div.classe h3 {
+    color: #3e4b4b;
+    font-family: 'Istok Web', sans-serif;
+    position: relative;
+    top: 20px;
+    left: 40px;
+    background-color: white;
+    font-size: 20px;
+    width: 50px;
+}
+
+div.classe p.total-eleve {
+    color: #3e4b4b;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: bold;
+    position: relative;
+    top: 130px;
+    left: 40px;
+    background-color: white;
+    font-size: 20px;
+    width: 50%;
+}
+
+div.classe p.trois-petits-points {
+    position: relative;
+    top: 100px;
+    float: right;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    font-size: 25px;
+    height: 1px;
+    width: 10px;
+    background-color: white;
+}

@@ -20,6 +20,17 @@ async function afficherEleve(id) {
     });
 }
 
+async function afficherEleveWithClasse(id) {
+    return new Promise((resolve,reject) => {
+        // Récupération de l'élève et sa classe
+        bdd.query(`SELECT * FROM eleve,classe WHERE eleve.idClasse_eleve=classe.id_classe AND id_eleve=${id}`,
+        (err,result) => {
+            if (err) throw err; 
+            resolve(result);
+        });
+    });
+}
+
 // -------------------- MODIFIER --------------------
 async function modifierEleve(id,nom,prenom,pseudo,mdp,estActif,idClasse) {
     // Modification de l'élève
@@ -44,6 +55,7 @@ async function supprimerEleve(id) {
 module.exports = {
     creerEleve,
     afficherEleve,
+    afficherEleveWithClasse,
     modifierEleve,
     supprimerEleve
 }

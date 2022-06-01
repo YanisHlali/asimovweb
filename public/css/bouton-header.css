@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
+
+button.header, button.header-asimov {
+    right: 30px;
+    color: white;
+    background-color: #0070FF;
+    font-size: 20px;
+    padding: 10px;
+    font-family: 'Istok Web', sans-serif;
+    width: auto;
+    float: right;
+    border: none;
+    border-radius: 5px;
+}
+
+button.header {
+    position: relative;
+    top: 30px;
+}
+
+button.header span, button.header-asimov span {
+    font-weight: bold;
+    background-color: #0070FF;
+}
+
+button.header-asimov {
+    position: relative;
+    top: -60px;
+}

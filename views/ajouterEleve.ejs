@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/ajouterEleve.css">
+    <link rel="stylesheet" href="/css/asimov.css" />
+</head>
+<body>
+    <%- include('../components/menu.ejs') %>
+    <%- include('../components/asimov.ejs') %>
+
+    <h1 class="titre">Ajouter un élève</h1>
+
+    <div class="main">
+        <form action="/eleve/ajouter" method="post">
+            <div class="align">
+                <input type="text" name="nom" placeholder="Nom" required autocomplete="off">
+                <input type="text" name="prenom" placeholder="Prénom" required autocomplete="off">
+            </div>
+            <br /><br /><br /><br /><br /><br /><br />
+            <div class="select">
+                <select name="classe">
+                    <option value="--">--Classe--</option>
+                    <% for (let i = 0; i < data.length; i++) { %>
+                        <option value="<%- data[i].id_classe %>"><%- data[i].nom_classe %></option>
+                    <% } %>
+                </select>
+            </div>
+            <br /><br /><br /><br /><br /><br />
+            <div class="align">
+                <input type="text" name="pseudo" placeholder="Pseudo" required>
+                <input type="password" name="mdp" placeholder="Mot de passe" required>
+            </div>
+            <input class="bouton" type="submit" value="Ajouter"><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br />
+        </form>
+    </div>
+</body>
+</html>

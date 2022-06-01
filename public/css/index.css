@@ -10,13 +10,13 @@ div.main {
     position: relative;
     left: 20%;
     width: 70%;
-    height: 100vh;
-    border: 1px solid red;
 }
 
 div.main h2 {
-    color: grey;
-    font-family: "Lato", sans-serif;
+    width: 50%;
+    color: #3e4b4b;
+    font-size: 30px;
+    font-family: 'Istok Web', sans-serif;
     position: relative;
     left: 50px;
     top: 80px;
